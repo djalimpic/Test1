@@ -6,7 +6,7 @@
             "request": "launch",
             "type": "al",
             "environmentType": "OnPrem",
-            "server": "http://ampas",
+            "server": "http://AMPAS",
             "serverInstance": "BC",
             "authentication": "UserPassword",
             "startupObjectId": 22,
