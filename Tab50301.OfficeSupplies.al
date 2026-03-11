@@ -45,6 +45,10 @@ table 50301 "Office Supplies"
                     Error('Unit Price cannot be a negative number.');
             end;
         }
+        field(8; Active; Boolean)
+        {
+            Caption = 'Active';
+        }
     }
     keys
     {
