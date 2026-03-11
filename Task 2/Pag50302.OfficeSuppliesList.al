@@ -1,5 +1,3 @@
-namespace Test.Test;
-
 page 50302 "Office Supplies List"
 {
     ApplicationArea = All;

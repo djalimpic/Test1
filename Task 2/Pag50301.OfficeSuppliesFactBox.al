@@ -1,5 +1,3 @@
-namespace Test.Test;
-
 page 50301 "Office Supplies FactBox"
 {
     ApplicationArea = All;
