@@ -1,6 +1,6 @@
 codeunit 50300 "Inventory Calculator"
 {
-    procedure CalculateStatistics(var Result: Record "Temp Inventory Statistic")
+    procedure CalculateStatistics(var Result: Record "Temp Inventory Statistics")
     var
         OfficeSupplies: Record "Office Supplies";
         TotalValue: Decimal;
@@ -31,12 +31,26 @@ codeunit 50300 "Inventory Calculator"
             until OfficeSupplies.Next() = 0;
 
         Result.Init();
-        Result."Entry No." := 1;
-        Result."Total Value" := TotalValue;
-        Result."Item Count" := ItemCount;
-        Result."Critical Count" := CriticalCount;
-        Result."Largest Deficit" := LargestDeficit;
+        Result."ID" := 1;
+        Result."TotalValue" := TotalValue;
+        Result."ItemCount" := ItemCount;
+        Result."CriticalCount" := CriticalCount;
+        Result."LargestDeficitName" := LargestDeficit;
         Result.Insert();
+    end;
+
+    procedure DetermineRowStyle(CurrentQuantity: Decimal; MinimumQuantity: Decimal; Value: Decimal): Text
+    begin
+        if CurrentQuantity = 0 then
+            exit('Unfavorable');
+
+        if CurrentQuantity < MinimumQuantity then
+            exit('Ambiguous');
+
+        if Value > 10000 then
+            exit('Favorable');
+
+        exit('Standard');
     end;
 
 }

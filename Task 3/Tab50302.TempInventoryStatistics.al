@@ -1,28 +1,28 @@
-table 50302 "Temp Inventory Statistic"
+table 50302 "Temp Inventory Statistics"
 {
-    Caption = 'Temp Inventory Statistic';
+    Caption = 'Temp Inventory Statistics';
     DataClassification = ToBeClassified;
     TableType = Temporary;
 
     fields
     {
-        field(1; "Entry No."; Integer)
+        field(1; ID; Integer)
         {
-            Caption = 'Entry No.';
+            Caption = 'ID';
         }
-        field(2; "Total Value"; Decimal)
+        field(2; TotalValue; Decimal)
         {
             Caption = 'Total Value';
         }
-        field(3; "Item Count"; Integer)
+        field(3; ItemCount; Integer)
         {
             Caption = 'Item Count';
         }
-        field(4; "Critical Count"; Integer)
+        field(4; CriticalCount; Integer)
         {
             Caption = 'Critical Count';
         }
-        field(5; "Largest Deficit"; Decimal)
+        field(5; LargestDeficitName; Decimal)
         {
             Caption = 'Largest Deficit';
         }
@@ -30,7 +30,7 @@ table 50302 "Temp Inventory Statistic"
     }
     keys
     {
-        key(PK; "Entry No.")
+        key(PK; "ID")
         {
             Clustered = true;
         }
