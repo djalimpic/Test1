@@ -9,8 +9,6 @@
             "server": "http://AMPAS",
             "serverInstance": "BC",
             "authentication": "UserPassword",
-            "startupObjectId": 22,
-            "startupObjectType": "Page",
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,

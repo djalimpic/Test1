@@ -3,6 +3,8 @@ table 50302 "Temp Inventory Statistics"
     Caption = 'Temp Inventory Statistics';
     DataClassification = ToBeClassified;
     TableType = Temporary;
+    // LookupPageId = "Inventory Statistics Card";
+    // DrillDownPageId = "Inventory Statistics Card";
 
     fields
     {
