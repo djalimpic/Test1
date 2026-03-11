@@ -2,7 +2,7 @@ pageextension 50348 "Role Center Ext" extends "Business Manager Role Center"
 {
     actions
     {
-        addlast(processing)
+        addlast(embedding)
         {
             action(Equipment)
             {
